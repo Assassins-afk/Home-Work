@@ -26,7 +26,7 @@ class PriorityQueue(Generic[T]):  # Обобщённый класс очеред
     def is_empty(self) -> bool:  # Метод проверки пустоты очереди
         return len(self._heap) == 0
 
-    def __len__(self) -> int:  # Метод для получения размера очереди через
+    def __len__(self) -> int:  # Метод для получения размера очереди
         return len(self._heap)
 
 # ЗАДАНИЕ 2: Иерархия Animal/Dog/Cat
