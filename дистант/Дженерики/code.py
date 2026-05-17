@@ -26,7 +26,7 @@ class PriorityQueue(Generic[T]):  # Обобщённый класс очеред
     def is_empty(self) -> bool:  # Метод проверки пустоты очереди
         return len(self._heap) == 0
 
-    def __len__(self) -> int:  # Метод для получения размера очереди через len()
+    def __len__(self) -> int:  # Метод для получения размера очереди через
         return len(self._heap)
 
 # ЗАДАНИЕ 2: Иерархия Animal/Dog/Cat
@@ -60,14 +60,14 @@ def copyAnimals(src: Sequence[Dog], dst: MutableSequence[Animal]) -> None:  # К
 T_contra = TypeVar('T_contra', bound=Animal, contravariant=True)
 
 def fillWithCats(dst: MutableSequence[T_contra]) -> None:  # Очищает список и заполняет тремя котами
-    dst.clear()  # Полностью очищает целевой список
+    dst.clear()
     dst.append(Cat("Барсик"))
     dst.append(Cat("Снежок"))
     dst.append(Cat("Рыжик"))
 
 # ЗАДАНИЕ 3.3: safeTransfer
 
-T_co = TypeVar('T_co', covariant=True)  # Ковариантный TypeVar, позволяет передавать список T или его подтипов
+T_co = TypeVar('T_co', covariant=True)  # TypeVar позволяет передавать список T или его подтипов
 
 def safeTransfer(src: MutableSequence[T_co], dst: MutableSequence[T_co]) -> None:  # Переносит все элементы из src в dst, очищая src
     for item in src:
